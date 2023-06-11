@@ -1,10 +1,6 @@
-import Logo from "../images/logo.svg";
-
 const Navigation = () => {
   return (
     <nav>
-      <img src={Logo} alt="logo" />
-
       <ul>
         <li>
           <a href="./" className="App-link">
