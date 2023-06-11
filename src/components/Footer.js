@@ -6,32 +6,32 @@ const Footer = () => {
       <ul>
         <h3>Doormat Navigation</h3>
         <li>
-          <a href="#" className="App-link">
+          <a href="./" className="App-link">
             Home
           </a>
         </li>
         <li>
-          <a href="#" className="App-link">
+          <a href="./" className="App-link">
             About
           </a>
         </li>
         <li>
-          <a href="#" className="App-link">
+          <a href="./" className="App-link">
             Menu
           </a>
         </li>
         <li>
-          <a href="#" className="App-link">
+          <a href="./" className="App-link">
             Reservations
           </a>
         </li>
         <li>
-          <a href="#" className="App-link">
+          <a href="./" className="App-link">
             Order Online
           </a>
         </li>
         <li>
-          <a href="#" className="App-link">
+          <a href="./" className="App-link">
             Login
           </a>
         </li>
@@ -39,17 +39,17 @@ const Footer = () => {
       <ul>
         <h3>Contact</h3>
         <li>
-          <a href="#" className="App-link">
+          <a href="./" className="App-link">
             Address
           </a>
         </li>
         <li>
-          <a href="#" className="App-link">
+          <a href="./" className="App-link">
             Phone Number
           </a>
         </li>
         <li>
-          <a href="#" className="App-link">
+          <a href="./" className="App-link">
             Email
           </a>
         </li>
@@ -57,17 +57,17 @@ const Footer = () => {
       <ul>
         <h3>Social Media Links</h3>
         <li>
-          <a href="#" className="App-link">
+          <a href="./" className="App-link">
             Address
           </a>
         </li>
         <li>
-          <a href="#" className="App-link">
+          <a href="./" className="App-link">
             Phone Number
           </a>
         </li>
         <li>
-          <a href="#" className="App-link">
+          <a href="./" className="App-link">
             Email
           </a>
         </li>
