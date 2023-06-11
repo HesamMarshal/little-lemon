@@ -3,4 +3,3 @@ const About = () => {
 };
 
 export default About;
-<section>About</section>;
