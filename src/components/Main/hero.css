@@ -1,0 +1,44 @@
+.hero {
+    /* margin: 0 70px; */
+
+    min-height: 300px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #495E57;
+    color: aliceblue;
+}
+
+.hero article {
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* align-items: center; */
+    margin-right: 70px;
+    width: 300px;
+    /* height: 200px; */
+}
+
+.hero article h1 {
+    color: #F4CE14;
+}
+
+.hero article h2 {
+    margin-top: 0;
+}
+
+.hero button {
+    /* margin-top: 10px; */
+    width: 200px;
+    height: 60px;
+    border-radius: 5px;
+    background-color: #F4CE14;
+}
+
+.hero img {
+    margin-top: 10px;
+    margin-right: 200px;
+    width: 250px;
+    height: 250px;
+    border-radius: 16px;
+}
