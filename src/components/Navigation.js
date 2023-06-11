@@ -1,11 +1,12 @@
-import Logo from "../images/Logo.svg";
+import Logo from "../images/logo.svg";
 
 const Navigation = () => {
   return (
     <nav>
       <img src={Logo} alt="logo" />
-      <Navigation />
+
       <ul>
+        <li>Home</li>
         <li>Home</li>
       </ul>
     </nav>
