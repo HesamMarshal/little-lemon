@@ -44,11 +44,12 @@ h6 {
 }
 
 h1 {
-  font-size: 40pt;
+  font-size: 64px;
+  font-weight: 700;
 }
 
 h2 {
-  font-size: 28pt;
+  font-size: 40px;
   font-weight: 400;
 }
 

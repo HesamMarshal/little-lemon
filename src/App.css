@@ -49,10 +49,11 @@ nav ul {
 /* Footer  */
 
 footer {
-  margin: 0 70px;
+  /* margin: 0 70px; */
   display: flex;
   justify-content: space-between;
   /* align-items: center; */
+  background-color: #495E57;
 }
 
 footer ul {
