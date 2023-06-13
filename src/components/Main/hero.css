@@ -42,3 +42,21 @@
     height: 250px;
     border-radius: 16px;
 }
+
+
+
+/* @media (max-width: 700px) {
+    .grid-adjustable-columns {
+        display: grid;
+        grid-auto-flow: row;
+    }
+}
+
+@media (min-width: 701px) {
+    .grid-adjustable-columns {
+        width: min(1000px, 75rem);
+        margin: 0 auto;
+        grid-auto-flow: column;
+        gap: 1em;
+    }
+} */

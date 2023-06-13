@@ -1,0 +1,36 @@
+#highlights {
+    margin: 10px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#highlights .top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    margin-top: 10px;
+}
+
+#highlights .top h2 {
+    font-size: 64px;
+    font-weight: 500;
+}
+
+#highlights .cardContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+#highlights button {
+    /* margin-top: 10px; */
+    width: 200px;
+    height: 60px;
+    border-radius: 5px;
+    background-color: #F4CE14;
+}
