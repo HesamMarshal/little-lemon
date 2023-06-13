@@ -2,7 +2,7 @@ import "./hero.css";
 import restaurantImage from "../../images/restaurant.jpg";
 const Hero = () => {
   return (
-    <section className="hero">
+    <section className="hero container">
       <article>
         <h1>Little Lemon</h1>
         <h2>Chicago</h2>
