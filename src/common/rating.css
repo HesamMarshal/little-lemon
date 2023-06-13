@@ -1,0 +1,37 @@
+.review {
+    width: 200px;
+    height: 175px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.rating {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.profile {
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    margin-top: 10px;
+}
+
+.profile .profileImage {
+
+    width: 45px;
+    height: 45px;
+}
+
+.profile .profileName {
+
+    margin-left: 30px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.reviewText {
+    margin-top: 10px;
+    font-size: 14px;
+}

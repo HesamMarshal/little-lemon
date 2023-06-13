@@ -1,0 +1,21 @@
+#testimonials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #D9D9D9;
+}
+
+#testimonials h3 {
+    margin-top: 50px;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.ratingsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
