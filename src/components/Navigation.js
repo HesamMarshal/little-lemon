@@ -10,7 +10,7 @@ const Navigation = () => {
           </Link>
         </li>
         <li>
-          <a href="./" className="App-link">
+          <a href="/#about" className="App-link">
             About
           </a>
         </li>
@@ -20,7 +20,7 @@ const Navigation = () => {
           </a>
         </li>
         <li>
-          <a href="./" className="App-link">
+          <a href="/booking" className="App-link">
             Reservation
           </a>
         </li>
