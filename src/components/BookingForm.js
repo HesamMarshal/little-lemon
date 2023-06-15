@@ -15,13 +15,17 @@ const BookingForm = ({ availableTimes, dispatch }) => {
   ]);
 
   const changeHandler = (e) => {
-    // console.log(e.target.value);
     SetFormValues({ ...formValues, [e.target.name]: e.target.value });
   };
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log("Working...");
+  };
+
+  const selectDate = (e) => {
+    changeHandler(e);
+    const selectedDate = new Date(e.target.value);
+    dispatch(selectedDate);
   };
   return (
     <>
@@ -33,10 +37,7 @@ const BookingForm = ({ availableTimes, dispatch }) => {
           id="resDate"
           name="resDate"
           value={formValues.resDate}
-          onChange={(e) => {
-            changeHandler(e);
-            dispatch(e.target.value);
-          }}
+          onChange={selectDate}
         />
 
         <label htmlFor="resTime">Choose time</label>

@@ -4,41 +4,21 @@ import Footer from "../components/Footer";
 
 import "./bookingPage.css";
 import { useReducer } from "react";
+import { fetchAPI } from "../api/WebApi";
 
 const BookingPage = () => {
-  // const initializeTimes = () => {
-  //   return [
-  //     { label: "17:00", value: "17:00" },
-  //     { label: "18:00", value: "18:00" },
-  //     { label: "19:00", value: "19:00" },
-  //     { label: "20:00", value: "20:00" },
-  //     { label: "21:00", value: "21:00" },
-  //     { label: "22:00", value: "22:00" },
-  //   ];
-  // };
-
   const initializeTimes = () => {
-    return [
-      { label: "17:00", value: "17:00" },
-      { label: "18:00", value: "18:00" },
-      { label: "19:00", value: "19:00" },
-      { label: "20:00", value: "20:00" },
-      { label: "21:00", value: "21:00" },
-      { label: "22:00", value: "22:00" },
-    ];
+    const availableTimesArray = fetchAPI(new Date());
+    return availableTimesArray.map((item) => {
+      return { label: item, value: item };
+    });
   };
 
   const updateTimes = (state, action) => {
-    // console.log(state);
-    // console.log("action:", action);
-    return [
-      { label: "17:00", value: "17:00" },
-      { label: "18:00", value: "18:00" },
-      { label: "19:00", value: "19:00" },
-      { label: "20:00", value: "20:00" },
-      { label: "21:00", value: "21:00" },
-      { label: "22:00", value: "22:00" },
-    ];
+    const availableTimes2 = fetchAPI(action);
+    return availableTimes2.map((item) => {
+      return { label: item, value: item };
+    });
   };
   const initialState = initializeTimes();
   const [availableTimes, dispatch] = useReducer(updateTimes, initialState);
