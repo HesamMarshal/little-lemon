@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./reservationForm.css";
 
-const BookingForm = ({ availableTimes }) => {
+const BookingForm = ({ availableTimes, dispatch }) => {
   const [formValues, SetFormValues] = useState({
     resDate: "",
     resTime: "17",
@@ -15,7 +15,7 @@ const BookingForm = ({ availableTimes }) => {
   ]);
 
   const changeHandler = (e) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     SetFormValues({ ...formValues, [e.target.name]: e.target.value });
   };
 
@@ -33,7 +33,10 @@ const BookingForm = ({ availableTimes }) => {
           id="resDate"
           name="resDate"
           value={formValues.resDate}
-          onChange={changeHandler}
+          onChange={(e) => {
+            changeHandler(e);
+            dispatch(e.target.value);
+          }}
         />
 
         <label htmlFor="resTime">Choose time</label>
