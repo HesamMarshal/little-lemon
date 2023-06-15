@@ -57,6 +57,7 @@ const ReservationForm = () => {
     <form onSubmit={formik.handleSubmit}>
       <Input label="Choose date" name="resDate" formik={formik} type="date" />
       <SelectComponent
+        label="Choose time"
         selectOptions={availableTimes}
         name="resTime"
         formik={formik}
@@ -68,6 +69,7 @@ const ReservationForm = () => {
         type="number"
       />
       <SelectComponent
+        label="Occasion"
         selectOptions={ocassioOptions}
         name="occasion"
         formik={formik}
