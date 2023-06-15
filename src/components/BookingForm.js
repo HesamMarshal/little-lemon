@@ -1,27 +1,79 @@
+import { useState } from "react";
 import "./reservationForm.css";
 
-const BookingForm = () => {
+const BookingForm = ({ availableTimes }) => {
+  const [formValues, SetFormValues] = useState({
+    resDate: "",
+    resTime: "17",
+    guests: 1,
+    occasion: "birthday",
+  });
+
+  const [ocassioOptions] = useState([
+    { label: "Birthday", value: "Birthday" },
+    { label: "Anniversary", value: "Anniversary" },
+  ]);
+
+  const changeHandler = (e) => {
+    console.log(e.target.value);
+    SetFormValues({ ...formValues, [e.target.name]: e.target.value });
+  };
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    console.log("Working...");
+  };
   return (
     <>
       <h2>Book Now</h2>
-      <form>
-        <label for="res-date">Choose date</label>
-        <input type="date" id="res-date" />
-        <label for="res-time">Choose time</label>
-        <select id="res-time ">
-          <option>17:00</option>
-          <option>18:00</option>
-          <option>19:00</option>
-          <option>20:00</option>
-          <option>21:00</option>
-          <option>22:00</option>
+      <form onSubmit={submitHandler}>
+        <label htmlFor="resDate">Choose date</label>
+        <input
+          type="date"
+          id="resDate"
+          name="resDate"
+          value={formValues.resDate}
+          onChange={changeHandler}
+        />
+
+        <label htmlFor="resTime">Choose time</label>
+        <select
+          id="resTime"
+          name="resTime"
+          value={formValues.resTime}
+          onChange={changeHandler}
+        >
+          {availableTimes.map((item) => (
+            <option value={item.value} key={item.value}>
+              {item.label}
+            </option>
+          ))}
         </select>
-        <label for="guests">Number of guests</label>
-        <input type="number" placeholder="1" min="1" max="10" id="guests" />
-        <label for="occasion">Occasion</label>
-        <select id="occasion">
-          <option>Birthday</option>
-          <option>Anniversary</option>
+        <label htmlFor="guests">Number of guests</label>
+        <input
+          type="number"
+          placeholder="1"
+          min="1"
+          max="10"
+          id="guests"
+          name="guests"
+          value={formValues.guests}
+          onChange={changeHandler}
+        />
+        <label htmlFor="occasion">Occasion</label>
+        <select
+          id="occasion"
+          name="occasion"
+          value={formValues.occasion}
+          onChange={changeHandler}
+        >
+          {ocassioOptions.map((item) => (
+            <option value={item.value} key={item.value}>
+              {item.label}
+            </option>
+          ))}
+          <option value="birthday">Birthday</option>
+          <option value="anniversary">Anniversary</option>
         </select>
         <input type="submit" value="Make Your reservation" />
       </form>
