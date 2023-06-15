@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import ReservationForm from "../components/ReservationForm";
+import BookingForm from "../components/BookingForm";
 import Footer from "../components/Footer";
 
 import "./bookingPage.css";
@@ -9,7 +9,7 @@ const BookingPage = () => {
     <>
       <Header />
       <section id="reservation">
-        <ReservationForm />
+        <BookingForm />
       </section>
       <Footer />
     </>

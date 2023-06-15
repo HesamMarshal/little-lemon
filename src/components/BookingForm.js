@@ -7,7 +7,7 @@ import SelectComponent from "../common/SelectComponent";
 
 import "./reservationForm.css";
 
-const ReservationForm = () => {
+const BookingForm = () => {
   const [availableTimes] = useState([
     { label: "17:00", value: "17:00" },
     { label: "18:00", value: "18:00" },
@@ -81,4 +81,4 @@ const ReservationForm = () => {
   );
 };
 
-export default ReservationForm;
+export default BookingForm;
