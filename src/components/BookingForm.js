@@ -54,30 +54,34 @@ const BookingForm = () => {
   });
 
   return (
-    <form onSubmit={formik.handleSubmit}>
-      <Input label="Choose date" name="resDate" formik={formik} type="date" />
-      <SelectComponent
-        label="Choose time"
-        selectOptions={availableTimes}
-        name="resTime"
-        formik={formik}
-      />
-      <Input
-        label="Number of guests"
-        name="guests"
-        formik={formik}
-        type="number"
-      />
-      <SelectComponent
-        label="Occasion"
-        selectOptions={ocassioOptions}
-        name="occasion"
-        formik={formik}
-      />
-      <button type="submit" disabled={!formik.isValid}>
-        Make Your reservation
-      </button>
-    </form>
+    <>
+      <h2>Book Now</h2>
+
+      <form onSubmit={formik.handleSubmit}>
+        <Input label="Choose date" name="resDate" formik={formik} type="date" />
+        <SelectComponent
+          label="Choose time"
+          selectOptions={availableTimes}
+          name="resTime"
+          formik={formik}
+        />
+        <Input
+          label="Number of guests"
+          name="guests"
+          formik={formik}
+          type="number"
+        />
+        <SelectComponent
+          label="Occasion"
+          selectOptions={ocassioOptions}
+          name="occasion"
+          formik={formik}
+        />
+        <button type="submit" disabled={!formik.isValid}>
+          Make Your reservation
+        </button>
+      </form>
+    </>
   );
 };
 

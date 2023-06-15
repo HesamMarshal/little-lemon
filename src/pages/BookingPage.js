@@ -8,7 +8,7 @@ const BookingPage = () => {
   return (
     <>
       <Header />
-      <section id="reservation">
+      <section id="reservation" className="container">
         <BookingForm />
       </section>
       <Footer />
