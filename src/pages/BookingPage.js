@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import BookingForm from "../components/BookingForm";
+import BookingForm from "../components/Booking/BookingForm";
 import Footer from "../components/Footer";
 
 import "./bookingPage.css";

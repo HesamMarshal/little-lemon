@@ -1,4 +1,4 @@
-import ConfirmedBooking from "../components/ConfirmedBooking";
+import ConfirmedBooking from "../components/Booking/ConfirmedBooking";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 

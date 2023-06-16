@@ -2,8 +2,8 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useState } from "react";
 
-import Input from "../common/Input";
-import SelectComponent from "../common/SelectComponent";
+import Input from "../../common/Input";
+import SelectComponent from "../../common/SelectComponent";
 
 import "./reservationForm.css";
 
