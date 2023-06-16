@@ -11,12 +11,19 @@ const Booked = () => {
   }, []);
 
   return (
-    <section id="boooked">
-      booked data
+    <section id="boooked" className="container">
+      <h3>Booked dates & Times</h3>
+
+      <div className="bookedData">
+        <p>Date</p>
+        <p>Time</p>
+        <p>Guests</p>
+        <p>Occasion</p>
+      </div>
       {bookingData.map((item) => {
         // TODO : show as table
         return (
-          <div>
+          <div className="bookedData">
             <p>{item.resDate}</p>
             <p>{item.resTime}</p>
             <p>{item.guests}</p>
