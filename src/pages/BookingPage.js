@@ -6,6 +6,7 @@ import "./bookingPage.css";
 import { useEffect, useReducer, useState } from "react";
 import { fetchAPI, submitAPI } from "../api/WebApi";
 import { useNavigate } from "react-router-dom";
+import Booked from "../components/Booking/Booked";
 
 const BookingPage = () => {
   const navigate = useNavigate();
@@ -32,7 +33,7 @@ const BookingPage = () => {
     if (result) {
       const oldBooking = [...bookingData];
       oldBooking.push(formData);
-      console.log(oldBooking);
+      // console.log(oldBooking);
       setBookingData(oldBooking);
 
       navigate("/confirm");
@@ -56,6 +57,7 @@ const BookingPage = () => {
           submitForm={submitForm}
         />
       </section>
+      <Booked />
       <Footer />
     </>
   );
