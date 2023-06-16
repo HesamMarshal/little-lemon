@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./reservationForm.css";
 
-const BookingForm = ({ availableTimes, dispatch }) => {
+const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
   const [formValues, SetFormValues] = useState({
     resDate: "",
     resTime: "17",
@@ -20,6 +20,8 @@ const BookingForm = ({ availableTimes, dispatch }) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
+    console.log({ ...formValues });
+    submitForm({ ...formValues });
   };
 
   const selectDate = (e) => {

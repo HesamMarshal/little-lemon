@@ -5,8 +5,10 @@ import Footer from "../components/Footer";
 import "./bookingPage.css";
 import { useReducer } from "react";
 import { fetchAPI, submitAPI } from "../api/WebApi";
+import { useNavigate } from "react-router-dom";
 
 const BookingPage = () => {
+  const navigate = useNavigate();
   const initializeTimes = () => {
     const availableTimesArray = fetchAPI(new Date());
     return availableTimesArray.map((item) => {
@@ -21,6 +23,12 @@ const BookingPage = () => {
     });
   };
 
+  const submitForm = (formData) => {
+    const result = submitAPI(formData);
+
+    if (result) navigate("/confirm");
+  };
+
   const initialState = initializeTimes();
   const [availableTimes, dispatch] = useReducer(updateTimes, initialState);
 
@@ -28,7 +36,11 @@ const BookingPage = () => {
     <>
       <Header />
       <section id="reservation" className="container">
-        <BookingForm availableTimes={availableTimes} dispatch={dispatch} />
+        <BookingForm
+          availableTimes={availableTimes}
+          dispatch={dispatch}
+          submitForm={submitForm}
+        />
       </section>
       <Footer />
     </>
