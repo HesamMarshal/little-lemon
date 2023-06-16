@@ -9,10 +9,10 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
     occasion: "birthday",
   });
 
-  const [ocassioOptions] = useState([
+  const ocassioOptions = [
     { label: "Birthday", value: "Birthday" },
     { label: "Anniversary", value: "Anniversary" },
-  ]);
+  ];
 
   const changeHandler = (e) => {
     SetFormValues({ ...formValues, [e.target.name]: e.target.value });
@@ -85,8 +85,6 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
                 {item.label}
               </option>
             ))}
-            <option value="birthday">Birthday</option>
-            <option value="anniversary">Anniversary</option>
           </select>
         </div>
         <button type="submit"> Make Your reservation</button>
