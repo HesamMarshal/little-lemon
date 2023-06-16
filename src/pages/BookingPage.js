@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 
 import "./bookingPage.css";
 import { useReducer } from "react";
-import { fetchAPI } from "../api/WebApi";
+import { fetchAPI, submitAPI } from "../api/WebApi";
 
 const BookingPage = () => {
   const initializeTimes = () => {
@@ -20,6 +20,7 @@ const BookingPage = () => {
       return { label: item, value: item };
     });
   };
+
   const initialState = initializeTimes();
   const [availableTimes, dispatch] = useReducer(updateTimes, initialState);
 
