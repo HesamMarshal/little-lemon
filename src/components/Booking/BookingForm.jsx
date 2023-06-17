@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import "./booking.css";
 
 const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
@@ -10,8 +11,9 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
   });
 
   const ocassioOptions = [
-    { label: "Birthday", value: "Birthday" },
-    { label: "Anniversary", value: "Anniversary" },
+    { label: "Birthday", value: "birthday" },
+    { label: "Anniversary", value: "anniversary" },
+    { label: "Engaement", value: "engaement" },
   ];
 
   const changeHandler = (e) => {
@@ -25,6 +27,7 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
 
   const selectDate = (e) => {
     changeHandler(e);
+
     const selectedDate = new Date(e.target.value);
     dispatch(selectedDate);
   };
@@ -72,6 +75,7 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
             onChange={changeHandler}
           />
         </div>
+
         <div className="formControl">
           <label htmlFor="occasion">Occasion</label>
           <select

@@ -1,32 +1,24 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useState } from "react";
 
 import Input from "../../common/Input";
 import SelectComponent from "../../common/SelectComponent";
 
-import "./reservationForm.css";
+import "./booking.css";
 
-const BookingForm = () => {
-  const [availableTimes] = useState([
-    { label: "17:00", value: "17:00" },
-    { label: "18:00", value: "18:00" },
-    { label: "19:00", value: "19:00" },
-    { label: "20:00", value: "20:00" },
-    { label: "21:00", value: "21:00" },
-    { label: "22:00", value: "22:00" },
-  ]);
-
-  const [ocassioOptions] = useState([
-    { label: "Birthday", value: "Birthday" },
-    { label: "Anniversary", value: "Anniversary" },
-  ]);
-  // formik Values and Funtions
+const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
+  const ocassioOptions = [
+    { label: "Select an Occasion ...", value: "" },
+    { label: "Birthday", value: "birthday" },
+    { label: "Anniversary", value: "anniversary" },
+    { label: "Engaement", value: "engaement" },
+  ];
+  // formik Values and Functions
   const initialValues = {
     resDate: "",
     resTime: "",
     guests: 1,
-    occasion: "Birth",
+    occasion: "birthday",
   };
   const onSubmit = (values) => {
     console.log(values);
@@ -40,25 +32,35 @@ const BookingForm = () => {
   });
 
   const formik = useFormik({
-    // 1. managing states
     initialValues,
-
-    // 2. handling form submit
     onSubmit,
-
-    // 3. validation
     validationSchema,
-
-    // validateOnMount: true,
-    // enableReinitialize: true,
   });
+
+  const selectDate = (e) => {
+    console.log(e.target.value);
+    formik.values.resDate = e.target.value;
+    const selectedDate = new Date(e.target.value);
+    dispatch(selectedDate);
+  };
 
   return (
     <>
       <h2>Book Now</h2>
-
       <form onSubmit={formik.handleSubmit}>
-        <Input label="Choose date" name="resDate" formik={formik} type="date" />
+        <div className="formControl">
+          <label htmlFor="resDate">Choose date</label>
+          <input
+            type="date"
+            id="resDate"
+            name="resDate"
+            value={formik.values.resDate}
+            onChange={selectDate}
+          />
+          {formik.errors.resDate && formik.touched.resDate && (
+            <div className="error">{formik.errors.resDate}</div>
+          )}
+        </div>
         <SelectComponent
           label="Choose time"
           selectOptions={availableTimes}
