@@ -18,7 +18,7 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
     resDate: "",
     resTime: "",
     guests: 1,
-    occasion: "birthday",
+    occasion: "",
   };
   const onSubmit = (values) => {
     console.log(values);
@@ -28,7 +28,7 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
     resDate: Yup.string().required("Date is requierd!"),
     resTime: Yup.string().required("Time is required!"),
     guests: Yup.number().required("Number of Guests is requierd!").nullable(),
-    occasion: Yup.string().required("Select your nationality"),
+    occasion: Yup.string().required("Select the occasion"),
   });
 
   const formik = useFormik({
@@ -51,6 +51,7 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
         <div className="formControl">
           <label htmlFor="resDate">Choose date</label>
           <input
+            aria-label="Choose date"
             type="date"
             id="resDate"
             name="resDate"
@@ -79,7 +80,11 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
           name="occasion"
           formik={formik}
         />
-        <button type="submit" disabled={!formik.isValid}>
+        <button
+          type="submit"
+          disabled={!formik.isValid}
+          aria-label="Make Your reservation"
+        >
           Make Your reservation
         </button>
       </form>
