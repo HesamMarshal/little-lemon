@@ -1,11 +1,4 @@
-const Input = ({
-  label,
-  name,
-  formik,
-  onChange,
-  placeholder = "",
-  type = "text",
-}) => {
+const Input = ({ label, name, formik, placeholder = "", type = "text" }) => {
   return (
     <div className="formControl">
       <label htmlFor={name}>{label}:</label>

@@ -28,13 +28,13 @@ function App() {
   };
 
   const submitForm = (formData) => {
+    console.log("APP", formData);
     const result = submitAPI(formData);
 
     if (result) {
       const newBooking = [...bookingData];
       newBooking.push(formData);
       setBookingData(newBooking);
-
       navigate("/confirm");
     }
   };

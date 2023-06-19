@@ -22,6 +22,7 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
   };
   const onSubmit = (values) => {
     console.log(values);
+    submitForm(values);
   };
 
   const validationSchema = Yup.object({
