@@ -25,8 +25,20 @@ header .logo {
   height: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+
+header li {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+header a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #333333;
+}
+
+header a:hover {
+  color: #495E57;
 }
 
 
@@ -62,4 +74,15 @@ footer ul {
   /* flex-direction: column; */
   /* justify-content: flex-start; */
   /* align-items: center; */
+}
+
+
+footer a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #F4CE14;
+}
+
+footer a:hover {
+  color: #EDEDEE;
 }
