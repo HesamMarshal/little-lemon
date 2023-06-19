@@ -14,8 +14,8 @@ const Input = ({
         {...formik.getFieldProps({ name })}
         name={name}
         id={name}
-        onChange={onChange}
         placeholder={placeholder}
+        aria-label={label}
       />
       {formik.errors[name] && formik.touched[name] && (
         <div className="error">{formik.errors[name]}</div>

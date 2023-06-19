@@ -2,7 +2,11 @@ const SelectComponent = ({ selectOptions, name, formik, label }) => {
   return (
     <div className="formControl">
       <label htmlFor={name}>{label}:</label>
-      <select name={name} {...formik.getFieldProps({ name })}>
+      <select
+        name={name}
+        {...formik.getFieldProps({ name })}
+        aria-label={label}
+      >
         {selectOptions.map((item) => (
           <option key={item.value} value={item.value}>
             {item.label}
