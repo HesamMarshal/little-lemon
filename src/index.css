@@ -41,7 +41,8 @@ a:hover {
 
 .container {
   /* max-width: 1000px; */
-  padding: 0 150px;
+  /* padding: 0 150px; */
+  max-width: 1200px;
 }
 
 h1,
