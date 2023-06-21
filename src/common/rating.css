@@ -1,14 +1,27 @@
+/* ////////////////////////////////////////
+//     RatingCard
+////////////////////////////////////////// */
+
 .review {
-    width: 200px;
-    height: 175px;
+    width: 250px;
+    /* height: 175px; */
     background-color: #fff;
-    padding: 20px;
+}
+
+.profileImage {
+    width: 100%;
+}
+
+.info {
+    padding: 10px;
 }
 
 .rating {
     font-size: 14px;
     font-weight: 700;
 }
+
+
 
 .profile {
     display: flex;
@@ -19,8 +32,8 @@
 
 .profile .profileImage {
 
-    width: 45px;
-    height: 45px;
+    /* width: 45px; */
+    /* height: 45px; */
 }
 
 .profile .profileName {

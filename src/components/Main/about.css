@@ -1,20 +1,26 @@
 #about {
     display: flex;
+    justify-content: center;
+    align-items: center;
     padding-top: 50px;
     padding-bottom: 50px;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
 }
 
 .left {
     max-width: 50%;
 }
 
-.right {
-    width: 50%;
-    display: flex;
-    justify-content: center;
+.right img {
+    width: 300px;
 }
 
-.right img {
-    width: 200px;
-    height: 200px;
+.about .top {
+    position: relative;
+    left: 50px;
+    top: 50px;
 }

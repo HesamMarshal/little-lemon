@@ -7,41 +7,36 @@
   box-sizing: border-box;
 }
 
-root {
+:root {
+  --color-white: aliceblue;
   --primary-color1: #495E57;
   --primary-color2: #F4CE14;
   --secondary-color1: #EE9972;
   --secondary-color2: #FBDABB;
   --highlight-color1: #EDEDEE;
   --highlight-color2: #333333;
-
-
 }
 
 body {
   margin: 0;
   font-family: 'Karla', sans-serif;
   scroll-behavior: smooth;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
-
 
 a {
   cursor: pointer;
   text-decoration: none;
-  color: #333333;
+  color: var(--highlight-color2);
 }
 
 a:hover {
-  color: #495E57;
+  color: var(--primary-color1);
 }
 
 .container {
-  /* max-width: 1000px; */
-  padding: 0 150px;
+  max-width: 1200px;
 }
 
 h1,

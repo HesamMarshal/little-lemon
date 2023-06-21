@@ -1,9 +1,21 @@
+/* ////////////////////////////////////////
+//     Testimonials
+////////////////////////////////////////// */
+
 #testimonials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color1);
+}
+
+.testimonials {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #495E57;
+    background-color: var(--primary-color1);
 }
 
 #testimonials h3 {
