@@ -8,6 +8,7 @@
 }
 
 :root {
+  --color-white: aliceblue;
   --primary-color1: #495E57;
   --primary-color2: #F4CE14;
   --secondary-color1: #EE9972;
@@ -30,11 +31,11 @@ body {
 a {
   cursor: pointer;
   text-decoration: none;
-  color: #333333;
+  color: var(--highlight-color2);
 }
 
 a:hover {
-  color: #495E57;
+  color: var(--primary-color1);
 }
 
 .container {

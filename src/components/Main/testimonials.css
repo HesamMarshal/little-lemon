@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #495E57;
+    background-color: var(--primary-color1);
 }
 
 #testimonials h3 {

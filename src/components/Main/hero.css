@@ -5,10 +5,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #495E57;
+    background-color: var(--primary-color1);
     max-height: 400px;
     margin-bottom: 120px;
-    color: aliceblue;
+    color: var(--color-white);
 }
 
 .hero {
@@ -29,7 +29,7 @@
 }
 
 .hero article h1 {
-    color: #F4CE14;
+    color: var(--primary-color2);
 }
 
 .hero button {
@@ -37,7 +37,7 @@
     width: 200px;
     height: 60px;
     border-radius: 5px;
-    background-color: #F4CE14;
+    background-color: var(--primary-color2);
 }
 
 .hero button:hover {
