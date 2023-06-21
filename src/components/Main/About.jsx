@@ -1,23 +1,33 @@
 import "./about.css";
 
-import image1 from "../../images/greek_salad.jpg";
+import image1 from "../../images/mario_and_adrian1.jpg";
+import image2 from "../../images/mario_and_adrian2.jpg";
 
 const About = () => {
   return (
-    <section id="about" className="container">
-      <div className="left">
-        <h1>Little Lemon</h1>
-        <h2>Chicago</h2>
-        <p>
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-          sint. Velit officia consequat duis enim velit mollit. Exercitation
-          veniam consequat sunt nostrud amet. Amet minim mollit non deserunt
-          ullamco est sit aliqua dolor do amet sint. Velit officia consequat
-          duis enim velit mollit.{" "}
-        </p>
-      </div>
-      <div className="right">
-        <img src={image1} alt="" />
+    <section id="about">
+      <div className="about container">
+        <div className="left">
+          <h1>Little Lemon</h1>
+          <h2>Chicago</h2>
+          <p>
+            If you're looking for a delicious and healthy meal, come to our
+            Mediterranean food restaurant. We serve a variety of dishes from
+            Greece, Turkey, Morocco, and more. You'll love our fresh salads,
+            grilled meats, savory sauces, and warm breads. Whether you want a
+            hearty gyro, a spicy tagine, or a creamy baklava, we have something
+            for everyone. Enjoy the flavors of the Mediterranean at our cozy and
+            friendly place.
+          </p>
+        </div>
+        <div className="right">
+          <img
+            className="top about-image"
+            src={image1}
+            alt="Mario and Adrian"
+          />
+          <img className="about-image" src={image2} alt="Mario and Adrian" />
+        </div>
       </div>
     </section>
   );
