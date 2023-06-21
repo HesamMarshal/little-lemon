@@ -75,11 +75,28 @@ nav ul {
 ////////////////////////////////////////// */
 
 footer {
-  /* margin: 0 70px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color1);
+  min-height: 200px;
+}
+
+.footer {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
-  background-color: #495E57;
+}
+
+.imageContainer {
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.small-logo {
+  width: 100%;
 }
 
 footer ul {
@@ -94,7 +111,7 @@ footer ul {
 footer a {
   cursor: pointer;
   text-decoration: none;
-  color: #F4CE14;
+  color: var(--primary-color2);
 }
 
 footer a:hover {

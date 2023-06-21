@@ -7,15 +7,13 @@
   box-sizing: border-box;
 }
 
-root {
+:root {
   --primary-color1: #495E57;
   --primary-color2: #F4CE14;
   --secondary-color1: #EE9972;
   --secondary-color2: #FBDABB;
   --highlight-color1: #EDEDEE;
   --highlight-color2: #333333;
-
-
 }
 
 body {
