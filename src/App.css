@@ -47,11 +47,11 @@ header li {
 header a {
   cursor: pointer;
   text-decoration: none;
-  color: #333333;
+  color: var(--highlight-color2);
 }
 
 header a:hover {
-  color: #495E57;
+  color: var(--primary-color1);
 }
 
 
@@ -99,15 +99,6 @@ footer {
   width: 100%;
 }
 
-footer ul {
-  /* width: 500px; */
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: flex-start; */
-  /* align-items: center; */
-}
-
-
 footer a {
   cursor: pointer;
   text-decoration: none;
@@ -115,5 +106,5 @@ footer a {
 }
 
 footer a:hover {
-  color: #EDEDEE;
+  color: var(--highlight-color1);
 }
